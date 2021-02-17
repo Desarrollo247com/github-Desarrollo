@@ -38,8 +38,8 @@
           <form method="post" action="agrega_destino.php" enctype="multipart/form-data">
             <div class="form-group">
             <input type="text" class="form-control" required name="destino-name" placeholder="Nombre del destino">
-            <input type="textarea" class="form-control" rows = "10" cols = "60"  required name="destino-descripcion" placeholder="Descripción del destino">
-            <input type="textarea" class="form-control" rows = "10" cols = "60"  required name="destino-direccion" placeholder="Dirección del destino">
+            <textarea class="form-control" rows = "5" cols = "40"  required name="destino-descripcion" placeholder="Descripción del destino"></textarea>
+            <textarea class="form-control" rows = "5" cols = "40"  required name="destino-direccion" placeholder="Dirección del destino"></textarea>
             <input type="number" class="form-control" required name="destino-latitud" step=0.00000001 placeholder="Latitud">
             <input type="number" class="form-control" required name="destino-longitud" step=0.00000001 placeholder="Longitud">
             <input type="number" class="form-control" required name="destino-tiempo" step=0.00000001 placeholder="Tiempo promedio en horas">
@@ -94,10 +94,10 @@
                     <td><?php echo remove_junk(ucfirst($cat['Nombre'])); ?></td>
                     <td><?php echo remove_junk(ucfirst($cat['Direccion'])); ?></td>
                     <td><img src="../uploads/sitios/<?php echo $cat['Imagen'];?>" class="img-thumbnail" /></td>
-                    <td><?php if(remove_junk(ucfirst($cat['Estado']))===1) echo 'ACTIVO';else { echo 'INACTIVO';}; ?></td>
+                    <td><?php if(remove_junk(ucfirst($cat['Estado']))==1) echo 'ACTIVO'; else { echo 'INACTIVO';}; ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a href="../views/inicio.php?open=EditaInsignia&id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar"><em class="fa fa-edit">&nbsp;</em>
+                        <a href="../views/inicio.php?open=EditaDestino&id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar"><em class="fa fa-edit">&nbsp;</em>
                         
                         </a>
                         <a href="elimina_destinos.php?id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">

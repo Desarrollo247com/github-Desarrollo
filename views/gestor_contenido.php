@@ -38,7 +38,10 @@ if(isset($_GET['open'])) {
 		case 'Destinos' :
 			if(!file_exists ("destinos.php")) die ("Página principal vacía!");
 			include "destinos.php";	 break;
-            
+         
+		case 'EditaDestino' :
+		if(!file_exists ("editar_destino.php")) die ("Página principal vacía!");
+		include "editar_destino.php";	 break;
             
         case 'Caracteristicas' :
 			if(!file_exists ("caracteristicas.php")) die ("Página principal vacía!");
