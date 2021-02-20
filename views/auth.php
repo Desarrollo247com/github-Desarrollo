@@ -13,7 +13,7 @@ if(empty($errors)){
      $session->login($user_id);
     //Update Sign in time
      updateLastLogIn($user_id);
-     $session->msg("s", "Bienvenido a Sistema de gestión de eventos.");
+     $session->msg("s", "Bienvenido a Sistema Toyota.");
      redirect('../views/inicio.php',false);
 
   } else {

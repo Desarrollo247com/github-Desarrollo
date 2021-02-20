@@ -58,6 +58,10 @@ if(isset($_GET['open'])) {
         case 'Clientes' :
 			if(!file_exists ("clientes.php")) die ("Página principal vacía!");
 			include "clientes.php"; break;  
+		
+		case 'TipoVehiculo' :
+			if(!file_exists ("tipovehiculo.php")) die ("Página principal vacía!");
+			include "tipovehiculo.php"; break;  	
 
 		case 'Agregarclientes' :
 			if(!file_exists ("add_customer.php")) die ("Página principal vacía!");

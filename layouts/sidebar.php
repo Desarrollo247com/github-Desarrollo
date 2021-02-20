@@ -40,6 +40,7 @@
             <a class="collapse-item" href="?open=Caracteristicas">Características</a>
             <a class="collapse-item" href="?open=Destinos">Destinos</a>
             <a class="collapse-item" href="?open=Insignias">Insignias</a>
+            <a class="collapse-item" href="?open=TipoVehiculo">Tipo de vehículo</a>
             <a class="collapse-item" href="?open=Marcas">Marcas</a>
             <a class="collapse-item" href="?open=Modelos">Modelos</a>
          
