@@ -96,7 +96,7 @@
                         <a href="../views/inicio.php?open=EditaDestino&id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar"><em class="fa fa-edit">&nbsp;</em>
                         
                         </a>
-                            <a href="elimina_destinos.php?id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
+                            <a href="elimina_registro.php?id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
                             <em class="fa fa-trash">&nbsp;</em>
                      
                         </a>

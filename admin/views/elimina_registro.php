@@ -13,7 +13,7 @@
 <?php
   $delete_id = delete_by_id('tbl_registro',$Registro['Id']);
   if($delete_id){
-      $session->msg("s","Marca eliminada");
+      $session->msg("s","Registro eliminada");
       redirect('inicio.php?open=Registro');
   } else {
       $session->msg("d","Eliminación falló");

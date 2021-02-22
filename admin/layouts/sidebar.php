@@ -2,7 +2,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
        
         <div class="sidebar-brand-text mx-3"><img src="../img/logo.png"></div>
         
@@ -37,31 +37,29 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Maestros del sistema:</h6>
-            <a class="collapse-item" href="?open=Registro">Registro de afiliados</a>
-            <a class="collapse-item" href="?open=Caracteristicas">Características destino</a>
-             <a class="collapse-item" href="?open=CategoriaDestino">Categoría de Destinos</a>
-            <a class="collapse-item" href="?open=Destinos">Destinos</a>
-            <a class="collapse-item" href="?open=Insignias">Insignias</a>
-            <a class="collapse-item" href="?open=TipoVehiculo">Tipo de vehículo</a>
-            <a class="collapse-item" href="?open=Marcas">Marcas</a>
-            <a class="collapse-item" href="?open=Modelos">Modelos</a>
+            <a class="collapse-item" href="?open=Registro"><em class="fa fa-user-friends">&nbsp;</em>Registro de afiliados</a>
+            <a class="collapse-item" href="?open=Caracteristicas"><em class="fa fa-tags">&nbsp;</em>Características destino</a>
+             <a class="collapse-item" href="?open=CategoriaDestino"><em class="fa fa-bars">&nbsp;</em>Categoría de Destinos</a>
+            <a class="collapse-item" href="?open=Destinos"><em class="fa fa-route">&nbsp;</em>Destinos</a>
+            <a class="collapse-item" href="?open=Insignias"><em class="fa fa-award">&nbsp;</em>Insignias</a>
+            <a class="collapse-item" href="?open=TipoVehiculo"><em class="fa fa-car">&nbsp;</em>Tipo de vehículo</a>
+            <a class="collapse-item" href="?open=Marcas"><em class="fa fa-box">&nbsp;</em>Marcas</a>
+            <a class="collapse-item" href="?open=Modelos"><em class="fa fa-boxes">&nbsp;</em>Modelos</a>
          
           </div>
         </div>
       </li>
 
-<li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-blog"></i>
           <span>Blog</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Administrador del blog:</h6>
-            <a class="collapse-item" href="?open=Registro">Registro de afiliados</a>
-            <a class="collapse-item" href="?open=Caracteristicas">Características destino</a>
-            
-         
+            <h6 class="collapse-header">Administrador de blog</h6>
+             <a class="collapse-item" href="?open=CategoriaBlog"><em class="fa fa-bars">&nbsp;</em>Categorías</a>
+             <a class="collapse-item" href="?open=Revisar"><em class="fa fa-pen">&nbsp;</em>Artículos</a>  
           </div>
         </div>
       </li>
@@ -84,7 +82,7 @@
         </a>
         <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Reporte de Ventas</h6>
+            <h6 class="collapse-header">Reportes</h6>
             <a class="collapse-item" href="?open=Reportes">Consolidado</a>
             
            

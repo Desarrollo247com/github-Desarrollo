@@ -76,6 +76,14 @@ if(isset($_GET['open'])) {
 			if(!file_exists ("registro_afiliados.php")) die ("Página principal vacía!");
 			include "registro_afiliados.php"; break; 
 
+			case 'CategoriaBlog' :
+			if(!file_exists ("categoria_blog.php")) die ("Página principal vacía!");
+			include "categoria_blog.php"; break; 
+
+			case 'EditaCategoriaBlog' :
+			if(!file_exists ("editar_categoria_blog.php")) die ("Página principal vacía!");
+			include "editar_categoria_blog.php"; break; 
+
 			default:
 			if(!file_exists ("../views/main.php")) die ("Página principal vacía!");
 			include "main.php";	 break;

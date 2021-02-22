@@ -60,9 +60,10 @@ function count_by_id($table){
   global $db;
   if(tableExists($table))
   {
-    $sql    = "SELECT COUNT(id) AS total FROM ".$db->escape($table);
+    $sql    = "SELECT COUNT(Id) AS total FROM ".$db->escape($table);
     $result = $db->query($sql);
-     return($db->fetch_assoc($result));
+    $valor=$db->fetch_assoc($result);
+    return $valor;
   }
 }
 /*--------------------------------------------------------------*/
@@ -86,13 +87,13 @@ function tableExists($table){
     global $db;
     $username = $db->escape($username);
     $password = $db->escape($password);
-    $sql  = sprintf("SELECT Id_usuario,Nombre_usuario,Clave_usuario,Nivel_usuario FROM Tbl_usuarios WHERE Nombre_usuario ='%s' LIMIT 1", $username);
+    $sql  = sprintf("SELECT Id,Nombre_usuario,Clave_usuario,Nivel_usuario FROM tbl_usuarios WHERE Nombre_usuario ='%s' LIMIT 1", $username);
     $result = $db->query($sql);
     if($db->num_rows($result)){
       $user = $db->fetch_assoc($result);
       $password_request = sha1($password);
       if($password_request === $user['Clave_usuario'] ){
-        return $user['Id_usuario'];
+        return $user['Id'];
       }
     }
    return false;
@@ -174,7 +175,7 @@ function tableExists($table){
 	{
 		global $db;
     $date = make_date();
-    $sql = "UPDATE Tbl_usuarios SET Fecha_actulizacion='{$date}' WHERE Id_usuario ='{$user_id}' LIMIT 1";
+    $sql = "UPDATE tbl_usuarios SET Fecha_actulizacion='{$date}' WHERE Id ='{$user_id}' LIMIT 1";
     $result = $db->query($sql);
     return ($result && $db->affected_rows() === 1 ? true : false);
 	}
@@ -222,7 +223,7 @@ function tableExists($table){
   function find_by_groupLevel($level)
   {
     global $db;
-    $sql = "SELECT group_level FROM Tbl_user_groups WHERE group_level = '{$db->escape($level)}' LIMIT 1 ";
+    $sql = "SELECT group_level FROM tbl_user_groups WHERE group_level = '{$db->escape($level)}' LIMIT 1 ";
     $result = $db->query($sql);
     return($db->num_rows($result) === 0 ? true : false);
   }
@@ -560,6 +561,17 @@ function  consulta_pedido($codigo){
   return find_by_sql($sql);
 }
 
+/*--------------------------------------------------------------*/
+/* Function for query for filter
+/*--------------------------------------------------------------*/
+function  consultasfiltro($table,$filtro){
+  global $db;
+
+  
+  $sql="SELECT * FROM {$db->escape($table)} WHERE $filtro " ;
+ 
+  return find_by_sql($sql);
+}
 
 
 
