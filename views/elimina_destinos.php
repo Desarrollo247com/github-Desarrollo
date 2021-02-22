@@ -4,7 +4,7 @@
   page_require_level(1);
 ?>
 <?php
-  $Destinos = find_by_id('Tbl_destino',$_GET['id']);
+  $Destinos = find_by_id('tbl_destino',$_GET['id']);
   if(!$Destinos){
     $session->msg("d","ID de destino falta.");
     redirect('inicio.php?open=Destinos');

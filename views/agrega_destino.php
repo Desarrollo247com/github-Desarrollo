@@ -12,6 +12,7 @@
    $destino_longitud = remove_junk($db->escape($_POST['destino-longitud'])); 
    $destino_tiempo = remove_junk($db->escape($_POST['destino-tiempo']));
    $destino_estado = remove_junk($db->escape($_POST['destino-estado']));
+   $destino_cat=remove_junk($db->escape($_POST['destino-categoria']));
 
    $tipo_archivo = $_FILES['file_upload']['type'];
    $tamano_archivo = $_FILES['file_upload']['size'];
@@ -31,7 +32,7 @@
       
     }
 
-      $sql  = "INSERT INTO tbl_destino (Nombre,Descripcion,Direccion,Latitud,Longitud,Tiempo_promedio,Imagen,Estado) VALUES ('{$destino_name}','{$destino_descripcion}','{$destino_direccion}','{$destino_latitud}','{$destino_longitud}','{$destino_tiempo}','{$destino_photo}','{$destino_estado}')";
+      $sql  = "INSERT INTO tbl_destino (Nombre,Descripcion,Direccion,Latitud,Longitud,Tiempo_promedio,Imagen,Estado,Id_cat_destino) VALUES ('{$destino_name}','{$destino_descripcion}','{$destino_direccion}','{$destino_latitud}','{$destino_longitud}','{$destino_tiempo}','{$destino_photo}','{$destino_estado}','{$destino_cat}')";
      
       if($db->query($sql)){
         $session->msg("s", "Destino agregado exitosamente.");

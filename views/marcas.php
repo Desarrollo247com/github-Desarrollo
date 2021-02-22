@@ -4,8 +4,8 @@
   // Checkin What level user has permission to view this page
   page_require_level(1);
   
-  $all_marcas = find_all('Tbl_marca');
-  $all_estado=find_all('Tbl_estado');
+  $all_marcas = find_all('tbl_marca');
+  $all_estado=find_all('tbl_estado');
         //$all_photo = find_all('media');
 ?>
 

@@ -4,7 +4,7 @@
   page_require_level(1);
 ?>
 <?php
-  $Marca = find_by_id('Tbl_marca',$_GET['id']);
+  $Marca = find_by_id('tbl_marca',$_GET['id']);
   if(!$Marca){
     $session->msg("d","ID de la marca falta.");
     redirect('inicio.php?open=Marcas');

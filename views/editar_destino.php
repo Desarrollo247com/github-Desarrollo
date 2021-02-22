@@ -7,7 +7,7 @@
 <?php
 $destino = find_by_id('tbl_destino',$_GET['id']);
 $estado=find_all('tbl_estado');
-
+ $all_cat=find_detination_active();
 if(!$destino){
     $session->msg("d","No existe el id. del destino");
      redirect('destinos.php');
@@ -24,6 +24,7 @@ if(!$destino){
    $destino_direccion = remove_junk($db->escape($_POST['destino-direccion']));
    $destino_latitud = remove_junk($db->escape($_POST['destino-latitud']));
    $destino_longitud = remove_junk($db->escape($_POST['destino-longitud'])); 
+   $destino_categoria = remove_junk($db->escape($_POST['destino-categoria']));
    $destino_tiempo = remove_junk($db->escape($_POST['destino-tiempo']));
    $destino_estado = remove_junk($db->escape($_POST['destino-estado']));
    $tmp_name=$_FILES['file_upload']['tmp_name'];
@@ -34,7 +35,7 @@ if(!$destino){
                         {
 
                                    $query   = "UPDATE tbl_destino SET";
-                    $query  .=" Nombre ='{$destino_name}',Descripcion ='{$destino_descripcion}', Direccion ='{$destino_direccion}',Latitud ='{$destino_latitud}',Longitud ='{$destino_longitud}',Tiempo_promedio ='{$destino_tiempo}',Estado ='{$destino_estado}'";
+                    $query  .=" Nombre ='{$destino_name}',Descripcion ='{$destino_descripcion}', Direccion ='{$destino_direccion}',Latitud ='{$destino_latitud}',Longitud ='{$destino_longitud}',Tiempo_promedio ='{$destino_tiempo}',Estado ='{$destino_estado}',Id_cat_destino ='{$destino_categoria}'";
                     $query  .=" WHERE Id ='{$destino['Id']}'";
                     $result = $db->query($query);
                             if($result && $db->affected_rows() === 1){
@@ -52,7 +53,7 @@ if(!$destino){
                         move_uploaded_file($tmp_name, "$uploads_dir/$name");
 
                     $query   = "UPDATE tbl_destino SET";
-                    $query  .=" Nombre ='{$destino_name}',Descripcion ='{$destino_descripcion}', Direccion ='{$destino_direccion}',Latitud ='{$destino_latitud}',Longitud ='{$destino_longitud}',Tiempo_promedio ='{$destino_tiempo}',Imagen ='{$name}',Estado ='{$destino_estado}'";
+                    $query  .=" Nombre ='{$destino_name}',Descripcion ='{$destino_descripcion}', Direccion ='{$destino_direccion}',Latitud ='{$destino_latitud}',Longitud ='{$destino_longitud}',Tiempo_promedio ='{$destino_tiempo}',Imagen ='{$name}',Estado ='{$destino_estado}',Id_cat_destino='{$destino_categoria}'";
                     $query  .=" WHERE Id ='{$destino['Id']}'";
                     $result = $db->query($query);
                             if($result && $db->affected_rows() === 1){
@@ -103,6 +104,14 @@ if(!$destino){
            <div class="col-md-12"><label>Nombre:</label><input type="text" value="<?=$destino['Nombre']?>" class="form-control" required name="destino-name" placeholder="Nombre del destino"></div>
            <div class="col-md-12"><label>Descripcion:</label> <textarea class="form-control" rows = "5" cols = "40"  required name="destino-descripcion" placeholder="Descripción del destino"><?=$destino['Descripcion']?></textarea></div>
            <div class="col-md-12"><label>Dirección:</label> <textarea class="form-control" rows = "5" cols = "40"  required name="destino-direccion" placeholder="Dirección del destino"><?=$destino['Direccion']?></textarea></div>
+            <div class="col-md-12"><label>Categoría del destino:</label><select placeholder="Categoría del destino" required="" aria-required="true" class="form-control" name="destino-categoria">
+                 <option value="">- Seleccione una categoría - </option>
+                 <?php foreach ($all_cat as $catDes): ?>
+                  <option value="<?=$catDes['Id']; ?>" <?php if($destino['Id_cat_destino'] == $catDes['Id']): echo "selected"; endif; ?> > <?=$catDes['Descripcion']?></option>          
+               
+                  <?php endforeach; ?>
+              
+                   </select></div>
            <div class="col-md-3"><label>Latitud:</label> <input type="number" value="<?=$destino['Latitud']?>" class="form-control" required name="destino-latitud" step=0.00000001 placeholder="Latitud"></div>
            <div class="col-md-3"><label>Longitud:</label> <input type="number" value="<?=$destino['Longitud']?>" class="form-control" required name="destino-longitud" step=0.00000001 placeholder="Longitud"></div>
            <div class="col-md-6"><label>Tiempo promedio:</label> <input type="number" value="<?=$destino['Tiempo_promedio']?>" class="form-control" required name="destino-tiempo" step=0.00000001 placeholder="Tiempo promedio en horas"></div>

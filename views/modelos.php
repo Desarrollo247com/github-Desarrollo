@@ -5,7 +5,7 @@
   page_require_level(1);
   
   $all_modelos = find_model();
-  $all_estado=find_all('Tbl_estado');
+  $all_estado=find_all('tbl_estado');
   $all_marcas=find_brand_active();
         //$all_photo = find_all('media');
 ?>

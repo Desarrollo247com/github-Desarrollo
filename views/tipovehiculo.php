@@ -79,10 +79,10 @@
                     <td><?php if(remove_junk(ucfirst($cat['Estado']))==1) echo 'ACTIVO';else { echo 'INACTIVO';}; ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a href="../views/inicio.php?open=EditaMarca&id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar"><em class="fa fa-edit">&nbsp;</em>
+                        <a href="../views/inicio.php?open=EditaTipo&id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar"><em class="fa fa-edit">&nbsp;</em>
                         
                         </a>
-                        <a href="elimina_marcas.php?id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
+                        <a href="elimina_tipo.php?id=<?php echo (int)$cat['Id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">
                             <em class="fa fa-trash">&nbsp;</em>
                      
                         </a>

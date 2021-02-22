@@ -55,90 +55,28 @@ if(isset($_GET['open'])) {
 			if(!file_exists ("edit_categorie.php")) die ("Página principal vacía!");
 			include "edit_categorie.php"; break; 
             
-        case 'Clientes' :
-			if(!file_exists ("clientes.php")) die ("Página principal vacía!");
-			include "clientes.php"; break;  
-		
+        	
 		case 'TipoVehiculo' :
 			if(!file_exists ("tipovehiculo.php")) die ("Página principal vacía!");
-			include "tipovehiculo.php"; break;  	
-
-		case 'Agregarclientes' :
-			if(!file_exists ("add_customer.php")) die ("Página principal vacía!");
-			include "add_customer.php"; break;
-            
-        case 'Editarclientes' :
-			if(!file_exists ("editar_clientes.php")) die ("Página principal vacía!");
-			include "editar_clientes.php"; break;   
-            
-		case 'Medias' :
-			if(!file_exists ("media.php")) die ("Página principal vacía!");
-			include "media.php"; break;   
-            
-        case 'Usuarios' :
-			if(!file_exists ("users.php")) die ("Página principal vacía!");
-			include "users.php"; break;   
-        
-         case 'Crea_usuarios' :
-			if(!file_exists ("add_user.php")) die ("Página principal vacía!");
-			include "add_user.php"; break;  
-            
-        case 'Edita_usuarios' :
-			if(!file_exists ("edit_user.php")) die ("Página principal vacía!");
-			include "edit_user.php"; break;  
-            
-		 case 'Pedido' :
-			if(!file_exists ("pedido.php")) die ("Página principal vacía!");
-			include "pedido.php"; break;  
-            
-         case 'Reportes' :
-			if(!file_exists ("filtroreportes.php")) die ("Página principal vacía!");
-			include "filtroreportes.php"; break; 
-            
-        case 'Resultados' :
-			if(!file_exists ("reportes.php")) die ("Página principal vacía!");
-			include "reportes.php"; break;  
-			
-		case 'Perfil' :
-			if(!file_exists ("profile.php")) die ("Página principal vacía!");
-			include "profile.php"; break;
-			case 'Cuenta' :
-			if(!file_exists ("edit_account.php")) die ("Página principal vacía!");
-			include "edit_account.php"; break;		
-            
-           case 'Pedidos' :
-			if(!file_exists ("listadopedidos.php")) die ("Página principal vacía!");
-			include "listadopedidos.php"; break;    
+			include "tipovehiculo.php"; break; 
 		
-			  case 'Clave' :
-			if(!file_exists ("change_password.php")) die ("Página principal vacía!");
-			include "change_password.php"; break; 
+			case 'EditaTipo' :
+			if(!file_exists ("editar_tipo.php")) die ("Página principal vacía!");
+			include "editar_tipo.php"; break; 
 			
-			 case 'edita_entrega' :
-			if(!file_exists ("entrega.php")) die ("Página principal vacía!");
-			include "entrega.php"; break; 
+			case 'CategoriaDestino' :
+			if(!file_exists ("categorias_destinos.php")) die ("Página principal vacía!");
+			include "categorias_destinos.php"; break; 
+
+			case 'EditaCategoriaDestino' :
+			if(!file_exists ("editar_categoria_destino.php")) die ("Página principal vacía!");
+			include "editar_categoria_destino.php"; break;
 			
-			 case 'cancela_entrega' :
-			if(!file_exists ("cancela.php")) die ("Página principal vacía!");
-			include "cancela.php"; break;
-            
-            case 'Revisar' :
-			if(!file_exists ("revisarpedidos.php")) die ("Página principal vacía!");
-			include "revisarpedidos.php"; break;
-            
-            case 'modifica' :
-			if(!file_exists ("modifica_pedido.php")) die ("Página principal vacía!");
-			include "modifica_pedido.php"; break;
-			
-            case 'agrega_evento' :
-			if(!file_exists ("modifica_pedido.php")) die ("Página principal vacía!");
-			include "modifica_pedido.php"; break;
-            
-             case 'Combo' :
-			if(!file_exists ("combo.php")) die ("Página principal vacía!");
-			include "combo.php"; break;
-            
-		default:
+			case 'Registro' :
+			if(!file_exists ("registro_afiliados.php")) die ("Página principal vacía!");
+			include "registro_afiliados.php"; break; 
+
+			default:
 			if(!file_exists ("../views/main.php")) die ("Página principal vacía!");
 			include "main.php";	 break;
 	}

@@ -4,7 +4,7 @@
   page_require_level(1);
 ?>
 <?php
-  $Caracteristicas = find_by_id('Tbl_caracteristicas',$_GET['id']);
+  $Caracteristicas = find_by_id('tbl_caracteristicas',$_GET['id']);
   if(!$Caracteristicas){
     $session->msg("d","ID de la caracteristica falta.");
     redirect('inicio.php?open=Caracteristicas');

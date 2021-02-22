@@ -4,7 +4,7 @@
   page_require_level(1);
 ?>
 <?php
-  $Modelo = find_by_id('Tbl_modelo',$_GET['id']);
+  $Modelo = find_by_id('tbl_modelo',$_GET['id']);
   if(!$Modelo){
     $session->msg("d","ID del modelo falta.");
     redirect('inicio.php?open=Modelos');

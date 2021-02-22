@@ -4,7 +4,7 @@
   page_require_level(1);
 ?>
 <?php
-  $insignia = find_by_id('Tbl_insignias',$_GET['id']);
+  $insignia = find_by_id('tbl_insignias',$_GET['id']);
   if(!$insignia){
     $session->msg("d","ID de la insignia falta.");
     redirect('inicio.php?open=Insignias');

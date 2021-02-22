@@ -37,7 +37,9 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Maestros del sistema:</h6>
-            <a class="collapse-item" href="?open=Caracteristicas">Características</a>
+            <a class="collapse-item" href="?open=Registro">Registro de afiliados</a>
+            <a class="collapse-item" href="?open=Caracteristicas">Características destino</a>
+             <a class="collapse-item" href="?open=CategoriaDestino">Categoría de Destinos</a>
             <a class="collapse-item" href="?open=Destinos">Destinos</a>
             <a class="collapse-item" href="?open=Insignias">Insignias</a>
             <a class="collapse-item" href="?open=TipoVehiculo">Tipo de vehículo</a>
@@ -48,6 +50,21 @@
         </div>
       </li>
 
+<li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Blog</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Administrador del blog:</h6>
+            <a class="collapse-item" href="?open=Registro">Registro de afiliados</a>
+            <a class="collapse-item" href="?open=Caracteristicas">Características destino</a>
+            
+         
+          </div>
+        </div>
+      </li>
 
       
 

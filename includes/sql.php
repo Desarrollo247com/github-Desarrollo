@@ -153,6 +153,18 @@ function tableExists($table){
       return $result;
   }
 
+      /*--------------------------------------------------------------*/
+  /* Find destination active
+  /* 
+  /*--------------------------------------------------------------*/
+  function find_detination_active(){
+      global $db;
+      $results = array();
+      $sql = "SELECT * FROM tbl_categoriadestino WHERE Estado=1";
+      $result = find_by_sql($sql);
+      return $result;
+  }
+
 
   /*--------------------------------------------------------------*/
   /* Function to update the last log in of a user
